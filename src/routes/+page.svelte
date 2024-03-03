@@ -4,6 +4,7 @@
 	import Gallery from "$lib/components/blocks/Gallery.svelte";
 	import PricingTable from "$lib/components/blocks/PricingTable.svelte";
 	import Hero from "$lib/components/ui/Hero.svelte";
+	import Subscribe from "$lib/components/ui/Subscribe.svelte";
 
 	export let data;
 	export let content = {
@@ -42,3 +43,5 @@
 <Featured content={Featured_Content} />
 
 <PricingTable content={PricingTable_Content} />
+
+<Subscribe />
