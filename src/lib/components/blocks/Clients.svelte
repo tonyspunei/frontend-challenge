@@ -8,7 +8,7 @@
   <div class="flex flex-col items-center space-y-12">
     <h2 class="text-4xl">You’ll be in good company</h2>
   
-    <ul class="flex items-center space-x-14">
+    <ul class="flex items-center justify-center flex-wrap gap-14">
       <li>
         <img src="/images/Google.png" alt="google logo">
       </li>
