@@ -5,9 +5,9 @@
 
 <ConstrainedWidth as="footer" class="py-12">
   <div class="flex items-center justify-between">
-    <span>© 2021 Flowbite, LLC. All rights reserved.</span>
+    <span class="text-gray-500">© 2021 Flowbite, LLC. All rights reserved.</span>
   
-    <ul class="flex md:space-x-6">
+    <ul class="flex space-x-6">
       <li>
         <a href="https://www.facebook.com">
           <Icon icon="fa:facebook" class="w-6 h-6 text-[#9CA3AF]" />
