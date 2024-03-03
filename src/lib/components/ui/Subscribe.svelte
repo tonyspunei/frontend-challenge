@@ -3,7 +3,7 @@
 	import Icon from "@iconify/svelte";
 </script>
 
-<ConstrainedWidth class="py-24">
+<ConstrainedWidth class="py-12 md:py-24">
   <div class="flex flex-col items-center text-center space-y-8">
     <div class="space-y-4 max-w-2xl">
       <h2 class="text-4xl text-gray-800">Sign up for our newsletter</h2>
@@ -18,7 +18,7 @@
         </div>
         <button class="h-full py-3 px-4 bg-blue-600 text-white border-2 border-blue-600">Subscribe</button>
       </div>
-      <p class="text-sm text-gray-500">We care about the protection of your data. Read our Privacy Policy. </p>
+      <p class="text-sm text-gray-500">We care about the protection of your data. Read our <a class="text-gray-800 underline underline-offset-3" href="/privacy-policy">Privacy Policy.</a></p>
     </form>  
   </div>
 </ConstrainedWidth>
