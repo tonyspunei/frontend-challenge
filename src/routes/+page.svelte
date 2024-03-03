@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Hero from "$lib/components/ui/Hero.svelte";
+	import Clients from "$lib/components/blocks/Clients.svelte";
+import Hero from "$lib/components/ui/Hero.svelte";
 
 	export let content = {
 		Hero: {
@@ -10,3 +11,5 @@
 </script>
 
 <Hero content={content.Hero} />
+
+<Clients />
