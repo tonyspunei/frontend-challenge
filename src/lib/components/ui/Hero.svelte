@@ -5,9 +5,9 @@
   export let content;
 </script>
 
-<ConstrainedWidth class="pt-24">
+<ConstrainedWidth class="pt-24 overflow-hidden">
   <div class="flex items-center">
-    <div class="flex flex-col items-center flex-1 text-center space-y-8 py-20">
+    <div class="flex flex-col items-center w-8/12 text-center space-y-8 py-20">
       <div class="space-y-6">
         {#if content?.heading}
           <h1 class="text-6xl text-gray-900">{content.heading}</h1>
@@ -29,9 +29,9 @@
       </div>
     </div>
 
-    <div class="flex-1 pb-[37.5vw] relative">
+    <div class="flex w-4/12 pb-[37.5vw] relative">
       <picture class="flex w-[50vw] absolute aspect-[785/630]">
-        <img class="relative h-full w-full object-cover" src="/images/hero-img.png" alt="">
+        <img class="relative h-full w-full object-cover object-top" src="/images/hero-img.png" alt="">
       </picture>
     </div>
   </div>
