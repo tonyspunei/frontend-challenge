@@ -5,7 +5,7 @@
   export let content;
 </script>
 
-<ConstrainedWidth class="py-16">
+<ConstrainedWidth class="py-12 md:py-24">
   <div class="flex flex-col space-y-12">
     <div class="flex flex-col items-center text-center space-y-4">
       <h2 class="text-4xl text-gray-800">{content.heading}</h2>
