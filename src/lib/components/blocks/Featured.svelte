@@ -5,7 +5,7 @@
   export let content;
 </script>
 
-<ConstrainedWidth class="py-16">
+<ConstrainedWidth class="py-12 md:py-24">
   <div class="flex flex-col space-y-12">
     <div class="flex flex-col space-y-4">
       {#if content?.heading}
@@ -16,7 +16,7 @@
       {/if}
     </div>
 
-    <div class="flex space-x-12">
+    <div class="flex flex-col md:flex-row gap-12">
       <div class="space-y-4 flex-1">
         <Icon icon="mingcute:presentation-2-fill" class="text-blue-600 h-12 w-12 p-2 rounded-full bg-gray-300" />
         <div class="space-y-2">
