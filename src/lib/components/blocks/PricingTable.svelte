@@ -7,7 +7,7 @@
 
 <ConstrainedWidth class="py-16">
   <div class="flex flex-col space-y-12">
-    <div class="flex flex-col items-center space-y-4">
+    <div class="flex flex-col items-center text-center space-y-4">
       <h2 class="text-4xl text-gray-800">{content.heading}</h2>
       <p class="text-lg text-gray-500">{content.blurb}</p>
       <div class="flex items-center space-x-4">
@@ -20,12 +20,12 @@
       </div>
     </div>
 
-    <div class="flex gap-10">
+    <div class="flex flex-col md:flex-row gap-10">
       {#each Object.entries(content.pricingPanels) as panel, index}
         <div 
           class:border-border-gray-200={index % 2 === 0}
           class:border-blue-600={index === 1}
-          class="flex flex-col flex-1 space-y-8 border drop-shadow-sm p-8 rounded-lg odd:mt-10" 
+          class="flex flex-col flex-1 space-y-8 border drop-shadow-sm p-8 rounded-lg md:odd:mt-10" 
         >
           <div class="flex flex-col items-center space-y-4">
             {#if index === 1}
@@ -38,15 +38,29 @@
               <Icon icon="mingcute:arrow-right-line" />
             </a>
           </div>
-          <button class="py-2.5 bg-gray-800 text-white rounded-lg w-full text-gray-800">Get started</button>
+          <button class:bg-blue-600={index === 1} class:bg-gray-800={index !== 1} class="py-2.5 text-white rounded-lg w-full text-gray-800">Get started</button>
           <ul class="space-y-4">
             <li class="flex items-center space-x-2.5 text-gray-800">
               <Icon icon="heroicons:credit-card-16-solid" />
               <p>All tools you need to manage payments</p>
             </li>
+            <!-- Mobile Only -->
+            <li class="flex md:hidden items-center space-x-2.5">
+              <Icon icon="heroicons-solid:emoji-happy" />
+              <p >No setup, monthly, or hidden fees</p>
+            </li>
+            <li class="flex md:hidden items-center space-x-2.5">
+              <Icon icon="mdi:shield-check" />
+              <p >Comprehensive security</p>
+            </li>
+            <!-- Mobile Only Start -->
             <li class="flex items-center space-x-2.5" class:text-gray-500={index < 1}>
               <Icon icon="heroicons-solid:paper-airplane" />
               <p class:line-through={index < 1}>Get hundreds of feature updates</p>
+            </li>
+            <li class="flex md:hidden items-center space-x-2.5" class:text-gray-500={index < 1}>
+              <Icon icon="mdi:fire" />
+              <p class:line-through={index < 1}>Payouts to your bank account</p>
             </li>
             <li class="flex items-center space-x-2.5" class:text-gray-500={index < 2}>
               <Icon icon="heroicons-solid:presentation-chart-bar" />
@@ -56,6 +70,12 @@
               <Icon icon="heroicons:chat-bubble-oval-left-ellipsis-16-solid" />
               <p class:line-through={index < 2}>24x7 phone, chat, and email support</p>
             </li>
+            <!-- Mobile Only -->
+            <li class="flex md:hidden items-center space-x-2.5" class:text-gray-500={index < 2}>
+              <Icon icon="ion:cube-sharp" />
+              <p class:line-through={index < 2}>Robust developer platform</p>
+            </li>
+            
           </ul>
         </div>
       {/each}
