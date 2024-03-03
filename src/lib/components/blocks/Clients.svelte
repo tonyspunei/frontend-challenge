@@ -4,7 +4,7 @@
 
 </script>
 
-<ConstrainedWidth class="py-24">
+<ConstrainedWidth class="py-12 md:py-24">
   <div class="flex flex-col items-center space-y-12">
     <h2 class="text-4xl">You’ll be in good company</h2>
   
