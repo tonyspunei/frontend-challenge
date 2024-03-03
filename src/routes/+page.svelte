@@ -22,11 +22,15 @@
 		Featured_Content: {
 			heading: "Designed for business teams like yours",
 			blurb: "Here at flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
+		},
+		PricingTable_Content: {
+			heading: "Designed for business teams like yours",
+			blurb: "Here at flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.",
+			pricingPanels: data.pricing
 		}
 	};
 
-	$: ({ pricing } = data);
-	$: ({ Hero_Content, Clients_Content, Gallery_Content, Featured_Content } = content);
+	$: ({ Hero_Content, Clients_Content, Gallery_Content, Featured_Content, PricingTable_Content } = content);
 </script>
 
 <Hero content={Hero_Content} />
@@ -37,4 +41,4 @@
 
 <Featured content={Featured_Content} />
 
-<PricingTable content={pricing} />
+<PricingTable content={PricingTable_Content} />
