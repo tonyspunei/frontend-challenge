@@ -5,8 +5,8 @@
   interface Content {
     heading: string;
     blurb: string;
-    monthlyPricing: Record<string, { amount: number }>;
-    yearlyPricing: Record<string, { amount: number }>;
+    monthlyPricing: Record<string, { amount: string; }>;
+    yearlyPricing: Record<string, { amount: string; }>;
   }
 
   export let content: Content;
