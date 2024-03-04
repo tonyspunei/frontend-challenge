@@ -23,7 +23,10 @@
 
     <div class="grid grid-cols-4 items-center gap-4">
       {#each content.images as image}
-        <picture class:col-span-2={image.colSpan === 2} class="h-60 w-full rounded-lg overflow-hidden">
+        <picture 
+          class:col-span-2={image?.colSpan === 2}
+          class="h-60 w-full rounded-lg overflow-hidden col-span-1"
+        >
           <img class="w-full h-full object-cover" src={image.src} alt={image.alt}>
         </picture>
       {/each}
