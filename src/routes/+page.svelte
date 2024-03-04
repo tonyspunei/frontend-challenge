@@ -27,7 +27,8 @@
 		PricingTable_Content: {
 			heading: "Designed for business teams like yours",
 			blurb: "Here at flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.",
-			pricingPanels: data.pricing
+			monthlyPricing: data.monthlyPricing,
+			yearlyPricing: data.yearlyPricing
 		}
 	};
 

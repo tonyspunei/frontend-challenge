@@ -1,22 +1,33 @@
 import fetch from "node-fetch";
 
-export const load = async () => {
-  const requestBody = {
-    interval: 'monthly'
-  };
-
+const fetchPricingData = async (interval) => {
   const response = await fetch("https://n8n.thearc.dev/webhook/pricing", {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(requestBody),
+    body: JSON.stringify({ interval }),
   });
 
   if (!response.ok) {
-    throw new Error(`Failed to fetch pricing data: ${response.statusText}`);
+    throw new Error(`Failed to fetch ${interval} pricing data: ${response.statusText}`);
   }
 
-  const data = await response.json();
-  return { pricing: data };
+  return response;
+}
+
+export const load = async () => {
+  // Fetch monthly pricing
+  const monthlyResponse = await fetchPricingData('monthly');
+  const monthlyData = await monthlyResponse.json();
+
+  // Fetch yearly pricing
+  const yearlyResponse = await fetchPricingData('yearly');
+  const yearlyData = await yearlyResponse.json();
+
+  return {
+    monthlyPricing: monthlyData,
+    yearlyPricing: yearlyData,
+  };
 };
+
