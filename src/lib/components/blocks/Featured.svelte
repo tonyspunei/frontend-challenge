@@ -2,7 +2,12 @@
   import ConstrainedWidth from "$lib/components/layout/ConstrainedWidth.svelte";
   import Icon from '@iconify/svelte'
 
-  export let content;
+  interface Content {
+    heading: string;
+    blurb: string;
+  }
+
+  export let content: Content;
 </script>
 
 <ConstrainedWidth class="py-12 md:py-24">
@@ -18,21 +23,21 @@
 
     <div class="flex flex-col md:flex-row gap-12">
       <div class="space-y-4 flex-1">
-        <Icon icon="mingcute:presentation-2-fill" class="text-blue-600 h-12 w-12 p-2 rounded-full bg-gray-300" />
+        <Icon icon="mingcute:presentation-2-fill" class="text-blue-600 h-12 w-12 p-2 rounded-full bg-gray-200" />
         <div class="space-y-2">
           <span class="text-gray-800 shrink-0">Marketing</span>
           <p class="text-gray-500">Plan it, create it, launch it. Collaborate seamlessly with all  the organization and hit your marketing goals every month with our marketing plan.</p>
         </div>
       </div>
       <div class="space-y-4 flex-1">
-        <Icon icon="fa6-solid:graduation-cap" class="text-blue-600 h-12 w-12 p-2 rounded-full bg-gray-300" />
+        <Icon icon="fa6-solid:graduation-cap" class="text-blue-600 h-12 w-12 p-2 rounded-full bg-gray-200" />
         <div class="space-y-2">
           <span class="text-gray-800 shrink-0">Marketing</span>
           <p class="text-gray-500">Plan it, create it, launch it. Collaborate seamlessly with all  the organization and hit your marketing goals every month with our marketing plan.</p>
         </div>
       </div>
       <div class="space-y-4 flex-1">
-        <Icon icon="tabler:briefcase-filled" class="text-blue-600 h-12 w-12 p-2 rounded-full bg-gray-300" />
+        <Icon icon="tabler:briefcase-filled" class="text-blue-600 h-12 w-12 p-2 rounded-full bg-gray-200" />
         <div class="space-y-2">
           <span class="text-gray-800 shrink-0">Marketing</span>
           <p class="text-gray-500">Plan it, create it, launch it. Collaborate seamlessly with all  the organization and hit your marketing goals every month with our marketing plan.</p>
