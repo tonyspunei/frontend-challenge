@@ -6,15 +6,30 @@
 	import Hero from "$lib/components/ui/Hero.svelte";
 	import Subscribe from "$lib/components/ui/Subscribe.svelte";
 
-	export let data;
+	interface PricingPlan {
+    amount: string;
+    unit: string;
+  }
+	interface PricingData {
+    monthlyPricing: Record<string, PricingPlan>; // Use Record for a map of string to PricingPlan
+    yearlyPricing: Record<string, PricingPlan>;
+  }
+
+	export let data: PricingData;
 	export let content = {
 		Hero_Content: {
 			heading: "We invest in the world's potential.",
 			blurb: "Here at flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
 		},
 		Clients_Content: {
-			heading: "Trusted by the world's best companies",
-			blurb: "We help businesses of all sizes to reach their goals."
+			heading: "You’ll be in good company",
+			blurb: "",
+			images: [
+				{ src: "/images/Google.png", alt: "Google Client 1" },
+				{ src: "/images/Microsoft.png", alt: "Microsoft Client 2" },
+				{ src: "/images/Spotify.png", alt: "Spotify Client 3" },
+				{ src: "/images/Mailchimp.png", alt: "Mailchimp Client 4" }
+			]
 		},
 		Gallery_Content: {
 			heading: "Our latest projects",
@@ -29,10 +44,15 @@
 			blurb: "Here at flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.",
 			monthlyPricing: data.monthlyPricing,
 			yearlyPricing: data.yearlyPricing
+		},
+		Subscribe_Content: {
+			heading: "Sign up for our newsletter",
+			blurb: "Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.",
+			ctaLabel: "Subscribe"
 		}
 	};
 
-	$: ({ Hero_Content, Clients_Content, Gallery_Content, Featured_Content, PricingTable_Content } = content);
+	$: ({ Hero_Content, Clients_Content, Gallery_Content, Featured_Content, PricingTable_Content, Subscribe_Content } = content);
 </script>
 
 <Hero content={Hero_Content} />
@@ -45,4 +65,4 @@
 
 <PricingTable content={PricingTable_Content} />
 
-<Subscribe />
+<Subscribe content={Subscribe_Content} />
