@@ -1,13 +1,21 @@
-<script>
+<script lang="ts">
   import ConstrainedWidth from "$lib/components/layout/ConstrainedWidth.svelte";
 	import Icon from "@iconify/svelte";
+
+  interface Content {
+    heading: string;
+    blurb: string;
+    ctaLabel: string;
+  }
+
+  export let content: Content;
 </script>
 
 <ConstrainedWidth class="py-12 md:py-24">
   <div class="flex flex-col items-center text-center space-y-8">
     <div class="space-y-4 max-w-2xl">
-      <h2 class="text-4xl text-gray-800">Sign up for our newsletter</h2>
-      <p class="text-xl text-gray-500">Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.</p>
+      <h2 class="text-4xl text-gray-800">{content.heading}</h2>
+      <p class="text-xl text-gray-500">{content.blurb}</p>
     </div>
   
     <form class="max-w-md w-full space-y-2">
@@ -16,7 +24,7 @@
           <Icon icon="material-symbols:mail-outline" class="h-5 w-5 " />
           <input class="py-3 px-4 outline-none bg-transparent placeholder-gray-500 focus:bg-gray-100" type="text" name="email" placeholder="Enter your email">
         </div>
-        <button class="h-full py-3 px-4 bg-blue-600 text-white border-2 border-blue-600">Subscribe</button>
+        <button class="h-full py-3 px-4 bg-blue-600 text-white border-2 border-blue-600">{content.ctaLabel}</button>
       </div>
       <p class="text-sm text-gray-500">We care about the protection of your data. Read our <a class="text-gray-800 underline underline-offset-3" href="/privacy-policy">Privacy Policy.</a></p>
     </form>  
