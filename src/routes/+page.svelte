@@ -32,8 +32,16 @@
 			]
 		},
 		Gallery_Content: {
-			heading: "Our latest projects",
-			blurb: "We help businesses of all sizes to reach their goals."
+			heading: "We didn't reinvent the wheel",
+			blurb: "We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.",
+			images: [
+				{ src: "/images/image-1.jpg", alt: "team", colSpan: 2 },
+				{ src: "/images/image-2.jpg", alt: "team", colSpan: 1 },
+				{ src: "/images/image-3.jpg", alt: "team", colSpan: 1 },
+				{ src: "/images/image-4.jpg", alt: "team", colSpan: 1 },
+				{ src: "/images/image-5.jpg", alt: "team", colSpan: 2 },
+				{ src: "/images/image-6.jpg", alt: "team", colSpan: 1 }
+			]
 		},
 		Featured_Content: {
 			heading: "Designed for business teams like yours",
@@ -66,3 +74,22 @@
 <PricingTable content={PricingTable_Content} />
 
 <Subscribe content={Subscribe_Content} />
+
+<picture class=" h-60 w-full rounded-lg overflow-hidden">
+	<img class="w-full h-full object-cover" >
+</picture>
+<picture class=" h-60 w-full rounded-lg overflow-hidden">
+	<img class="w-full h-full object-cover" >
+</picture>
+<picture class=" h-60 w-full rounded-lg overflow-hidden">
+	<img class="w-full h-full object-cover" >
+</picture>
+<picture class=" h-60 w-full rounded-lg overflow-hidden">
+	<img class="w-full h-full object-cover" >
+</picture>
+<picture class=" h-60 w-full rounded-lg overflow-hidden">
+	<img class="w-full h-full object-cover" >
+</picture>
+<picture class=" h-60 w-full rounded-lg overflow-hidden">
+	<img class="w-full h-full object-cover" >
+</picture>
