@@ -7,7 +7,7 @@
   this={as}
   class={`relative w-full ${$$props.class} ${backgroundColor}`}
 >
-  <div class="max-w-screen-xl mx-auto px-6 md:px-8">
+  <div class="max-w-screen-xl mx-auto px-8">
     <slot />
   </div>
 </svelte:element>
