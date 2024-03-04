@@ -2,7 +2,12 @@
   import ConstrainedWidth from '$lib/components/layout/ConstrainedWidth.svelte';
 	import Icon from '@iconify/svelte';
 
-  export let content;
+  interface Content {
+    heading: string;
+    blurb: string;
+  }
+
+  export let content: Content;
 </script>
 
 <ConstrainedWidth class="pt-24 overflow-hidden">
