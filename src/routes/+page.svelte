@@ -74,22 +74,3 @@
 <PricingTable content={PricingTable_Content} />
 
 <Subscribe content={Subscribe_Content} />
-
-<picture class=" h-60 w-full rounded-lg overflow-hidden">
-	<img class="w-full h-full object-cover" >
-</picture>
-<picture class=" h-60 w-full rounded-lg overflow-hidden">
-	<img class="w-full h-full object-cover" >
-</picture>
-<picture class=" h-60 w-full rounded-lg overflow-hidden">
-	<img class="w-full h-full object-cover" >
-</picture>
-<picture class=" h-60 w-full rounded-lg overflow-hidden">
-	<img class="w-full h-full object-cover" >
-</picture>
-<picture class=" h-60 w-full rounded-lg overflow-hidden">
-	<img class="w-full h-full object-cover" >
-</picture>
-<picture class=" h-60 w-full rounded-lg overflow-hidden">
-	<img class="w-full h-full object-cover" >
-</picture>
