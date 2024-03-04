@@ -2,7 +2,14 @@
   import ConstrainedWidth from "$lib/components/layout/ConstrainedWidth.svelte";
   import Icon from '@iconify/svelte';
 
-  export let content;
+  interface Content {
+    heading: string;
+    blurb: string;
+    monthlyPricing: Record<string, { amount: number }>;
+    yearlyPricing: Record<string, { amount: number }>;
+  }
+
+  export let content: Content;
   let yearly = false;
 
   $: pricingPanels = yearly ? content.yearlyPricing : content.monthlyPricing;
@@ -79,7 +86,6 @@
                 <Icon icon="ion:cube-sharp" />
                 <p class:line-through={index < 2}>Robust developer platform</p>
               </li>
-              
             </ul>
           </div>
         {/each}
