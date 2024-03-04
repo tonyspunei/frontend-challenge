@@ -22,7 +22,7 @@
       <div class="flex items-center rounded-lg overflow-hidden w-full text-gray-800">
         <div class="flex items-center border-2 border-gray-300 bg-gray-200 pl-3 w-full">
           <Icon icon="material-symbols:mail-outline" class="h-5 w-5 " />
-          <input class="py-3 px-4 outline-none bg-transparent placeholder-gray-500 focus:bg-gray-100" type="text" name="email" placeholder="Enter your email">
+          <input class="py-3 px-4 outline-none bg-gray-200 placeholder-gray-500" type="text" name="email" placeholder="Enter your email">
         </div>
         <button class="h-full py-3 px-4 bg-blue-600 text-white border-2 border-blue-600">{content.ctaLabel}</button>
       </div>
