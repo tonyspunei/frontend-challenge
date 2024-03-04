@@ -10,22 +10,22 @@
     </div>
 
     <div class="grid grid-cols-4 items-center gap-4">
-      <picture class="col-span-2 h-60 md:h-full w-full rounded-lg overflow-hidden">
+      <picture class="col-span-2 h-60 w-full rounded-lg overflow-hidden">
         <img class="w-full h-full object-cover" src="/images/image-1.jpg" alt="team">
       </picture>
-      <picture class="col-span-1 h-60 md:h-full w-full rounded-lg overflow-hidden">
+      <picture class="col-span-1 h-60 w-full rounded-lg overflow-hidden">
         <img class="w-full h-full object-cover" src="/images/image-2.jpg" alt="team">
       </picture>
-      <picture class="col-span-1 h-60 md:h-full w-full rounded-lg overflow-hidden">
+      <picture class="col-span-1 h-60 w-full rounded-lg overflow-hidden">
         <img class="w-full h-full object-cover" src="/images/image-3.jpg" alt="team">
       </picture>
-      <picture class="col-span-1 h-60 md:h-full w-full rounded-lg overflow-hidden">
+      <picture class="col-span-1 h-60 w-full rounded-lg overflow-hidden">
         <img class="w-full h-full object-cover" src="/images/image-4.jpg" alt="team">
       </picture>
-      <picture class="col-span-2 h-60 md:h-full w-full rounded-lg overflow-hidden">
+      <picture class="col-span-2 h-60 w-full rounded-lg overflow-hidden">
         <img class="w-full h-full object-cover" src="/images/image-5.jpg" alt="team">
       </picture>
-      <picture class="col-span-1 h-60 md:h-full w-full rounded-lg overflow-hidden">
+      <picture class="col-span-1 h-60 w-full rounded-lg overflow-hidden">
         <img class="w-full h-full object-cover" src="/images/image-6.jpg" alt="team">
       </picture>
     </div>
